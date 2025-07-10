@@ -1,67 +1,48 @@
-```turtle
+```
 @prefix comcore: <http://www.semanticweb.org/comcore#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru ;
-  comcore:hasPart :регистрация_Получателя_в_Систе ,
-                  :проверка_готовности_функционала_сайта_ИМ ,
-                  :установление_легитимности_продаваемых_са ,
-                  :заполнение_личного_кабинета_Клиента ,
-                  :создание_Бизнес_счета_для_Получателя_в_С .
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru ;
+  comcore:isPartOf :сайт_оператора ;
+  comcore:relation :кошелек .
 
-:регистрация_Получателя_в_Систе rdf:type comcore:Process ;
-  rdfs:label "регистрация Получателя в Системе МОНЕТА.РУ"@ru ;
-  comcore:isResourceOf :подключение_к_Системе_МОНЕТА_РУ .
+:кошелек rdf:type comcore:Resource ;
+  rdfs:label "Кошелек"@ru .
 
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "проверка готовности функционала сайта ИМ"@ru ;
-  comcore:isPartOf :подключение_к_Системе_МОНЕТА_РУ .
+:сайт_оператора rdf:type comcore:Resource ;
+  rdfs:label "Сайт Оператора"@ru ;
+  comcore:isResourceOf :доступ_в_личный_кабинет .
 
-:установление_легитимности_продаваемых_са rdf:type comcore:Process ;
-  rdfs:label "установление легитимности продаваемых сайтом товаров и услуг"@ru ;
-  comcore:isPartOf :подключение_к_Системе_МОНЕТА_РУ .
-
-:заполнение_личного_кабинета_Клиента rdf:type comcore:Process ;
-  rdfs:label "заполнение личного кабинета (ЛК) Клиента"@ru ;
-  comcore:isPartOf :подключение_к_Системе_МОНЕТА_РУ ;
-  comcore:isResourceOf :НКО .
-
-:создание_Бизнес_счета_для_Получателя_в_С rdf:type comcore:Process ;
-  rdfs:label "создание Бизнес - счета для Получателя в Системе МОНЕТА.РУ"@ru ;
-  comcore:isPartOf :подключение_к_Системе_МОНЕТА_РУ .
-
-:Получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru ;
-  comcore:isActorOf :регистрация_Получателя_в_Систе ,
-                   :создание_Бизнес_счета_для_Получателя_в_С .
-
-:Торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru ;
-  comcore:isActorOf :подключение_к_Системе_МОНЕТА_РУ .
-
-:Клиент rdf:type comcore:Agent ;
+:клиент rdf:type comcore:Agent ;
   rdfs:label "Клиент"@ru ;
-  comcore:isActorOf :заполнение_личного_кабинета_Клиента .
+  comcore:isActorOf :доступ_в_личный_кабинет .
 
-:НКО rdf:type comcore:Agent ;
-  rdfs:label "НКО"@ru ;
-  comcore:isResponsibleFor :личный_кабинет_Клиента .
+:лицевые_счета rdf:type comcore:Resource ;
+  rdfs:label "Лицевые счета"@ru ;
+  comcore:isPartOf :личный_кабинет .
 
-:сайт_ИМ rdf:type comcore:Resource ;
-  rdfs:label "сайт ИМ"@ru ;
-  comcore:isResourceOf :проверка_готовности_функционала_сайта_ИМ .
+:информация rdf:type comcore:Resource ;
+  rdfs:label "информация"@ru ;
+  comcore:isPartOf :личный_кабинет .
 
-:личный_кабинет_Клиента rdf:type comcore:Resource ;
-  rdfs:label "личный кабинет (ЛК) Клиента"@ru ;
-  comcore:isResourceOf :заполнение_личного_кабинета_Клиента .
+:доступ_в_личный_кабинет rdf:type comcore:Process ;
+  rdfs:label "Доступ в Личный кабинет"@ru .
 
-:Бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес - счет"@ru ;
-  comcore:isResultOf :создание_Бизнес_счета_для_Получателя_в_С .
+:настройка_двухфакторной_автен rdf:type comcore:Process ;
+  rdfs:label "настройка двухфакторной аутентификации"@ru ;
+  comcore:isPartOf :доступ_в_личный_кабинет .
 
-:Система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru ;
-  comcore:isResourceOf :подключение_к_Системе_МОНЕТА_РУ .
+:протокол_https rdf:type comcore:Resource ;
+  rdfs:label "протокол HTTPS"@ru ;
+  comcore:isResourceOf :доступ_в_личный_кабинет .
+
+:протокол_totp rdf:type comcore:Resource ;
+  rdfs:label "протокол TOTP"@ru ;
+  comcore:isResourceOf :настройка_двухфакторной_автен .
+
+:оператор rdf:type comcore:Agent ;
+  rdfs:label "Оператор"@ru ;
+  comcore:isResponsibleFor :информация .
 ```
