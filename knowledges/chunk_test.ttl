@@ -1,11 +1,10 @@
 ```turtle
-:личный_кабинет comcore:isPartOf :сайт_оператора .
-:сайт_оператора comcore:isResponsibleFor :личный_кабинет .
-:доступ_в_личный_кабинет comcore:isResourceOf :протокол_HTTPS .
-:доступ_в_личный_кабинет comcore:canBeResourceFor :двухфакторная_аутентификация .
-:двухфакторная_аутентификация comcore:isResourceOf :протокол_TOTP .
-:клиент comcore:isActorOf :доступ_в_личный_кабинет .
-:оператор comcore:isResponsibleFor :личный_кабинет .
-:личный_кабинет comcore:relation :кошелек .
-:личный_кабинет comcore:relation :лицевой_счет .
+:Личный_кабинет comcore:relation :Кошелек .
+:Личный_кабинет comcore:hasPart :данные_Клиента .
+:Личный_кабинет comcore:hasPart :Лицевые_счета .
+:Личный_кабинет comcore:hasPart :Иная_информация_определяемая_Операторо .
+:Личный_кабинет comcore:isResourceOf :Доступ_в_Личный_кабинет .
+:Доступ_в_Личный_кабинет comcore:hasPart :настройка_двухфакторной_аутентификации .
+:Клиент comcore:Initiates :Доступ_в_Личный_кабинет .
+:Оператор comcore:isResponsibleFor :Иная_информация_определяемая_Операторо .
 ```
