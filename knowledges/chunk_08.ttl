@@ -1,40 +1,29 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:идентификация_клиента comcore:isActorOf :клиент .
+:идентификация_клиента comcore:isResourceOf :заявление_клиента .
+:идентификация_клиента comcore:isResourceOf :кошелек .
+:идентификация_клиента comcore:isResourceOf :доступ .
+:идентификация_клиента comcore:isResourceOf :соглашение .
+:идентификация_клиента comcore:isResourceOf :законодательство_РФ .
+:идентификация_клиента comcore:isResourceOf :права .
+:идентификация_клиента comcore:isResourceOf :законные_интересы .
+:идентификация_клиента comcore:isResourceOf :недостоверные_данные .
+:идентификация_клиента comcore:isResourceOf :статус_резидента .
+:идентификация_клиента comcore:isResourceOf :законодательство_о_противодействии .
+:идентификация_клиента comcore:isResourceOf :обязательства .
+:идентификация_клиента comcore:isResourceOf :торговая_площадка .
+:идентификация_клиента comcore:isResourceOf :заявление_подписанное_клиентом .
+:идентификация_клиента comcore:isActorOf :нотариус .
+:идентификация_клиента comcore:isActorOf :консульская_организация .
+:идентификация_клиента comcore:isActorOf :уполномоченное_лицо .
+:идентификация_клиента comcore:isResourceOf :сайт_оператора .
+:упрощенная_идентификация comcore:isResourceOf :паспорт_гражданина_РФ .
+:упрощенная_идентификация comcore:isResourceOf :фамилия .
+:упрощенная_идентификация comcore:isResourceOf :имя .
+:упрощенная_идентификация comcore:isResourceOf :отчество .
+:упрощенная_идентификация comcore:isResourceOf :серия_и_номер_паспорта .
+:упрощенная_идентификация comcore:isResourceOf :номер_мобильного_телефона .
+:упрощенная_идентификация comcore:isResourceOf :страховой_номер_лицевого_счета .
+:упрощенная_идентификация comcore:isResourceOf :идентификационный_номер_налогоплательщика .
+:упрощенная_идентификация comcore:isResourceOf :номер_полиса_ОМС .
 ```

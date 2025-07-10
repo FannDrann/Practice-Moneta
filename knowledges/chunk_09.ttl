@@ -1,40 +1,20 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:оператор comcore:isActorOf :процедура_идентификации .
+:оператор comcore:isResponsibleFor :неперсонифицированный_кошелек .
+:оператор comcore:isResponsibleFor :персонифицированный_кошелек .
+:оператор comcore:isResponsibleFor :неперсонифицированный_именной_кошелек .
+:клиент comcore:isActorOf :распоряжение_клиента .
+:клиент comcore:isActorOf :авторизация_доступа .
+:процедура_идентификации comcore:isResultOf :персонифицированный_кошелек .
+:упрощенная_идентификация comcore:isResultOf :неперсонифицированный_именной_кошелек .
+:персонифицированный_кошелек comcore:isPartOf :лицевой_счет .
+:неперсонифицированный_кошелек comcore:isPartOf :лицевой_счет .
+:неперсонифицированный_именной_кошелек comcore:isPartOf :лицевой_счет .
+:лицевой_счет comcore:isPartOf :балансовый_счет_40903 .
+:лицевой_счет comcore:isPartOf :балансовый_счет_40914 .
+:конклюдентные_действия comcore:Initiates :соглашение .
+:аутентификационные_данные comcore:isResourceOf :авторизация_доступа .
+:личный_кабинет comcore:isResourceOf :авторизация_доступа .
+:платежный_пароль comcore:isResourceOf :распоряжение_клиента .
+:программное_обеспечение_оператора comcore:isResourceOf :авторизация_доступа .
 ```

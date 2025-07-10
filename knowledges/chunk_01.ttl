@@ -1,40 +1,35 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
+:клиент comcore:isActorOf :перевод ;
+  comcore:isResponsibleFor :личный_кабинет .
 
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
+:плательщик comcore:isActorOf :перевод .
 
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
+:получатель comcore:isActorOf :перевод .
 
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
+:лицевой_счет comcore:isResourceOf :перевод .
 
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
+:система_МОНЕТА_РУ comcore:isResourceOf :перевод .
 
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
+:личный_кабинет comcore:isResourceOf :управление_кошельком .
 
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
+:кошелек comcore:isResourceOf :управление_кошельком .
 
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
+:нерезиденты comcore:relation :клиент .
 
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
+:оператор comcore:isResponsibleFor :перевод ;
+  comcore:isResponsibleFor :остаток_ЭДС ;
+  comcore:isResponsibleFor :лицевой_счет .
 
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
+:остаток_ЭДС comcore:isResultOf :внесение_денежных_средств .
 
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
+:ответ_на_секретный_вопрос comcore:canBeResourceFor :аутентификация .
 
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
+:отдел_сопровождения comcore:isResponsibleFor :информирование_клиента .
 
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:отказ_от_выполнения_операции comcore:isResultOf :перевод .
+
+:перевод comcore:hasPart :снятие_средств ;
+  comcore:hasPart :зачисление_средств .
+
+:платежный_пароль comcore:isResourceOf :перевод .
 ```

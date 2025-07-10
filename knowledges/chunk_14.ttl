@@ -1,40 +1,25 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:Оператор comcore:isResponsibleFor :Соглашение .
+:Оператор comcore:isResponsibleFor :Предоставление_денежных_средств .
+:Оператор comcore:isResponsibleFor :Увеличение_Остатка_ЭДС .
+:Оператор comcore:isResponsibleFor :Возврат_денежных_средств .
+:Оператор comcore:isResponsibleFor :Перевод .
+:Клиент comcore:isActorOf :Сделка .
+:Клиент comcore:initiates :Предоставление_денежных_средств .
+:Клиент comcore:isActorOf :Возврат_денежных_средств .
+:Агент_Оператора comcore:isActorOf :Предоставление_денежных_средств .
+:Кошелек comcore:isResourceOf :Соглашение .
+:Остаток_ЭДС comcore:isResourceOf :Увеличение_Остатка_ЭДС .
+:Остаток_ЭДС comcore:isResourceOf :Возврат_денежных_средств .
+:Лицевой_счет comcore:isResourceOf :Увеличение_Остатка_ЭДС .
+:Лицевой_счет comcore:isResourceOf :Предоставление_денежных_средств .
+:Тариф comcore:isResourceOf :Вознаграждение .
+:Сделка comcore:isPartOf :Соглашение .
+:Перевод comcore:isPartOf :Соглашение .
+:Возврат_денежных_средств comcore:isPartOf :Соглашение .
+:Увеличение_Остатка_ЭДС comcore:isPartOf :Соглашение .
+:Предоставление_денежных_средств comcore:isPartOf :Соглашение .
+:Лимит_Остатка_ЭДС comcore:isResourceOf :Увеличение_Остатка_ЭДС .
+:Лимит_оборота_ЭДС comcore:isResourceOf :Увеличение_Остатка_ЭДС .
+:Сайт_Оператора comcore:isResourceOf :Предоставление_денежных_средств .
 ```

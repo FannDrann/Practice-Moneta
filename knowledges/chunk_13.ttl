@@ -1,40 +1,16 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:Клиент comcore:isActorOf :Переводы_ЭДС .
+:Кошелек comcore:isResourceOf :Переводы_ЭДС .
+:Программное_обеспечение_Кошелька comcore:isResourceOf :Переводы_ЭДС .
+:Аутентификационные_данные comcore:isResourceOf :Переводы_ЭДС .
+:Памятка_о_порядке_действий_в_случае_наличия_подозрения_о_компрометации_средств_доступа_к_счету comcore:isResourceOf :Переводы_ЭДС .
+:Правила_безопасности_в_отношении_используемых_средств_идентификации_доступа_к_счетам_при_работе_с_ЭДС comcore:isResourceOf :Переводы_ЭДС .
+:Сайт_Оператора comcore:isResourceOf :Переводы_ЭДС .
+:HTTPS comcore:isResourceOf :Переводы_ЭДС .
+:URL comcore:isResourceOf :Переводы_ЭДС .
+:SSL_соединение comcore:isResourceOf :Переводы_ЭДС .
+:Устройство_доступа_к_Кошельку comcore:isResourceOf :Переводы_ЭДС .
+:Аналог_собственноручной_подписи comcore:isResourceOf :Переводы_ЭДС .
+:Оператор comcore:isResponsibleFor :Переводы_ЭДС .
+:Клиент comcore:isResponsibleFor :Аутентификационные_данные .
 ```

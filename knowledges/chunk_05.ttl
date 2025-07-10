@@ -1,40 +1,28 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:соглашение comcore:isResourceOf :изменение_в_соглашение .
+:тариф comcore:isResourceOf :изменение_в_тариф .
+:оператор comcore:isActorOf :изменение_в_соглашение .
+:оператор comcore:isActorOf :изменение_в_тариф .
+:гражданский_кодекс_РФ comcore:isResourceOf :изменение_в_соглашение .
+:гражданский_кодекс_РФ comcore:isResourceOf :изменение_в_тариф .
+:договор comcore:isResourceOf :изменение_в_договор .
+:оператор comcore:isActorOf :изменение_в_договор .
+:сайт_оператора comcore:isResourceOf :размещение_новой_редакции .
+:стороны comcore:isActorOf :размещение_новой_редакции .
+:оператор comcore:isActorOf :размещение_новой_редакции .
+:оператор comcore:isResponsibleFor :сайт_оператора .
+:московское_время comcore:isResourceOf :перевод_электронных_денежных_средств .
+:системные_часы comcore:isResourceOf :перевод_электронных_денежных_средств .
+:операционный_день comcore:isResourceOf :перевод_электронных_денежных_средств .
+:оператор comcore:isActorOf :перевод_электронных_денежных_средств .
+:клиент comcore:isActorOf :перевод_электронных_денежных_средств .
+:комиссия comcore:isResourceOf :перевод_электронных_денежных_средств .
+:электронные_денежные_средства comcore:isResourceOf :перевод_электронных_денежных_средств .
+:электронное_средство_платежа comcore:isResourceOf :перевод_электронных_денежных_средств .
+:монета_ру comcore:isResourceOf :перевод_электронных_денежных_средств .
+:центральный_банк_РФ comcore:isResourceOf :перевод_электронных_денежных_средств .
+:торговая_площадка comcore:isResourceOf :информационное_технологическое_взаимодействие .
+:клиент comcore:isActorOf :информационное_технологическое_взаимодействие .
+:оператор comcore:isActorOf :информационное_технологическое_взаимодействие .
+:сайт_оператора comcore:isResourceOf :информационное_технологическое_взаимодействие .
 ```

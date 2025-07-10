@@ -1,40 +1,28 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
+:клиент comcore:isResponsibleFor :аутентификационные_данные ;
+  comcore:isResponsibleFor :платежный_пароль ;
+  comcore:isActorOf :восстановление_доступа ;
+  comcore:isActorOf :идентификация .
 
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
+:оператор comcore:isResponsibleFor :восстановление_доступа ;
+  comcore:isResponsibleFor :блокирование_кошелька ;
+  comcore:isActorOf :восстановление_доступа ;
+  comcore:isActorOf :блокирование_кошелька .
 
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
+:отдел_сопровождения comcore:isActorOf :восстановление_доступа .
 
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
+:аутентификационные_данные comcore:isResourceOf :идентификация .
 
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
+:платежный_пароль comcore:isResourceOf :восстановление_доступа .
 
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
+:личный_кабинет comcore:isResourceOf :восстановление_доступа .
 
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
+:кошелек comcore:isResourceOf :блокирование_кошелька ;
+  comcore:isResourceOf :восстановление_доступа .
 
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
+:секретный_вопрос comcore:isResourceOf :восстановление_доступа .
 
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
+:временный_пароль comcore:isResultOf :восстановление_доступа .
 
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:номер_мобильного_телефона comcore:isResourceOf :восстановление_доступа .
 ```

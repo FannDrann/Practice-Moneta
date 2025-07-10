@@ -1,40 +1,14 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:плательщик comcore:isActorOf :перевод_электронных_денежных_средств .
+:клиент comcore:isActorOf :перевод_электронных_денежных_средств .
+:договор comcore:isResourceOf :перевод_электронных_денежных_средств .
+:получатель comcore:isActorOf :перевод_электронных_денежных_средств .
+:оператор comcore:isResponsibleFor :перевод_электронных_денежных_средств .
+:получатель comcore:isResponsibleFor :распоряжение .
+:прекращение_использования_кошелька comcore:isResultOf :перевод_электронных_денежных_средств .
+:закрытие_лицевых_счетов_клиента comcore:isResultOf :прекращение_использования_кошелька .
+:приостановление_операции comcore:isResultOf :перевод_электронных_денежных_средств .
+:сайт_оператора comcore:canBeResourceFor :перевод_электронных_денежных_средств .
+:кошелек_клиента comcore:canBeResourceFor :перевод_электронных_денежных_средств .
+:электронное_средство_платежа_МОНЕТА_РУ comcore:canBeResourceFor :перевод_электронных_денежных_средств .
 ```

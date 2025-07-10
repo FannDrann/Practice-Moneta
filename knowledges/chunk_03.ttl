@@ -1,40 +1,22 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:Система_быстрых_платежей comcore:isResourceOf :Переводы_по_номеру_мобильного_телефона .
+:Система_быстрых_платежей comcore:isResourceOf :Упрощенная_идентификация .
+:Сервис_Банка_России comcore:isResponsibleFor :Система_быстрых_платежей .
+:Клиент comcore:isActorOf :Переводы_по_номеру_мобильного_телефона .
+:Клиент comcore:isActorOf :Упрощенная_идентификация .
+:Клиент comcore:isActorOf :Статус_активного_Клиента .
+:Клиент comcore:isActorOf :Статус_неактивного_Клиента .
+:Клиент comcore:isActorOf :Утрата_доступа .
+:Переводы_по_номеру_мобильного_телефона comcore:isResultOf :Остаток_ЭДС .
+:Система_МОНЕТА_РУ comcore:isResourceOf :Переводы_с_использованием_сети_Интернет .
+:Оператор comcore:isResponsibleFor :Статус_активного_Клиента .
+:Оператор comcore:isResponsibleFor :Статус_неактивного_Клиента .
+:Оператор comcore:isResponsibleFor :Блокирование_Кошелька .
+:Оператор comcore:isResponsibleFor :Тариф .
+:Оператор comcore:isResponsibleFor :Торговая_площадка .
+:Оператор comcore:isResponsibleFor :Упрощенная_идентификация .
+:Плательщик comcore:isActorOf :Переводы_с_использованием_сети_Интернет .
+:Получатель comcore:isActorOf :Переводы_с_использованием_сети_Интернет .
+:Кошелек comcore:isPartOf :Лицевые_счета .
+:Личный_кабинет comcore:isPartOf :Аутентификационные_данные .
 ```

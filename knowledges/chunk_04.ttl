@@ -1,40 +1,12 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:электронные_денежные_средства comcore:isResourceOf :перевод_электронных_денежных_средств .
+:лицо_предоставившее_денежные_средства comcore:isActorOf :перевод_электронных_денежных_средств .
+:обязанное_лицо comcore:isActorOf :перевод_электронных_денежных_средств .
+:электронное_средство_платежа_МОНЕТА_РУ comcore:isResourceOf :перевод_электронных_денежных_средств .
+:система_МОНЕТА_РУ comcore:isPartOf :электронное_средство_платежа_МОНЕТА_РУ .
+:клиент comcore:isActorOf :использование_электронного_средства_платежа .
+:FATCA comcore:relation :соглашение .
+:соглашение comcore:isResourceOf :использование_электронного_средства_платежа .
+:оператор comcore:isResponsibleFor :сайт_оператора .
+:сайт_оператора comcore:isResourceOf :ознакомление_с_соглашением .
 ```

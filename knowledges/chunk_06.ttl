@@ -1,40 +1,15 @@
 ```turtle
-:подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
-  rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru .
-
-:получатель rdf:type comcore:Agent ;
-  rdfs:label "Получатель"@ru .
-
-:торговая_площадка rdf:type comcore:Agent ;
-  rdfs:label "Торговая площадка"@ru .
-
-:система_МОНЕТА_РУ rdf:type comcore:Resource ;
-  rdfs:label "Система МОНЕТА.РУ"@ru .
-
-:перевод rdf:type comcore:Process ;
-  rdfs:label "Перевод"@ru .
-
-:регистрация_получателя rdf:type comcore:Process ;
-  rdfs:label "Регистрация Получателя"@ru .
-
-:проверка_готовности_функционала_сайта_ИМ rdf:type comcore:Process ;
-  rdfs:label "Проверка готовности функционала сайта ИМ"@ru .
-
-:установление_легитимности_продаваемых_товаров_и_услуг rdf:type comcore:Process ;
-  rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru .
-
-:личный_кабинет rdf:type comcore:Resource ;
-  rdfs:label "Личный кабинет"@ru .
-
-:клиент rdf:type comcore:Agent ;
-  rdfs:label "Клиент"@ru .
-
-:бизнес_счет rdf:type comcore:Resource ;
-  rdfs:label "Бизнес-счет"@ru .
-
-:данные_о_получателе rdf:type comcore:Resource ;
-  rdfs:label "Данные о Получателе"@ru .
-
-:товары_и_услуги rdf:type comcore:Resource ;
-  rdfs:label "Товары и услуги"@ru .
+:Торговая_площадка comcore:isActorOf :Информационно_технологическое_взаимодействие .
+:Клиент comcore:isActorOf :Информационно_технологическое_взаимодействие .
+:Оператор comcore:isActorOf :Информационно_технологическое_взаимодействие .
+:персональные_данные comcore:isResourceOf :Обработка_персональных_данных .
+:Кошелек_Клиента comcore:isResourceOf :предоставление_Электронного_средства_платежа_МОНЕТА_РУ .
+:ЭЛЕКТРОННОЕ_СРЕДСТВО_ПЛАТЕЖА_МОНЕТА_РУ comcore:isResultOf :предоставление_Электронного_средства_платежа_МОНЕТА_РУ .
+:Остаток_ЭДС comcore:isResultOf :зачисление_ЭДС .
+:Остаток_ЭДС comcore:isResourceOf :возврат_Остатка_ЭДС_Клиенту .
+:Переводы comcore:isResourceOf :исполнение_Распоряжений_Клиента_о_Переводе .
+:Переводы comcore:isResourceOf :сбор_обработка_хранение_и_предоставление_информации_о_Переводах .
+:Переводы comcore:isResultOf :исполнение_Распоряжений_Клиента_о_Переводе .
+:Соглашение comcore:isResourceOf :Информационно_технологическое_взаимодействие .
+:Программное_обеспечение_Торговой_площадки comcore:isResourceOf :Информационно_технологическое_взаимодействие .
 ```
