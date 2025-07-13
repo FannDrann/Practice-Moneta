@@ -1,0 +1,25 @@
+[
+    {
+        "label": "Проверка сайта",
+        "abbreviation": "",
+        "hasStatement": [
+            "Отдел комплаенс isActorFor Проверка сайта",
+            "Проверка сайта hasActor Отдел комплаенс"
+        ],
+        "type": "Process"      
+    },
+    {
+        "label": "Отдел комплаенс",
+        "abbreviation": "",
+        "hasStatement": [
+        ],
+        "type": "Agent"      
+    },
+    {
+        "label": "Отдел жалоб",
+        "abbreviation": "",
+        "hasStatement": [
+        ],
+        "type": "Agent"      
+    }
+]

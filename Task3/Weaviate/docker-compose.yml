@@ -1,0 +1,43 @@
+services:
+  weaviate:
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - '8081'
+      - --scheme
+      - http
+    image: cr.weaviate.io/semitechnologies/weaviate:1.30.2
+    ports:
+      - 8081:8081
+      - 50051:50051
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: text2vec-transformers
+      ENABLE_MODULES: 'text2vec-transformers'
+      TRANSFORMERS_INFERENCE_API: 'http://t2v-transformers:8080'
+      CLUSTER_HOSTNAME: 'node1'
+    depends_on:
+      - t2v-transformers
+
+  t2v-transformers:
+    image: cr.weaviate.io/semitechnologies/transformers-inference:sentence-transformers-paraphrase-multilingual-MiniLM-L12-v2
+    # На сайте weaviate есть более подробная информация о том, какую модель ставить на weaviate
+    # https://weaviate.io/developers/weaviate/model-providers/transformers/embeddings#available-models -> списки возможных HuggingFace моделей
+    # Weaviate так же позволяет создавать образы других моделей. Особо этот момент не рассматривал, так что тут вы сами
+    # Все остальные модели, показанные в документации, подключаются локально примерно таким же образом
+    environment:
+      MODEL_NAME: 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'
+    ports:
+      - "8080:8080"
+
+#weaviate 8081
+#векторизатор HuggingFace 8080
+
+volumes:
+  weaviate_data:

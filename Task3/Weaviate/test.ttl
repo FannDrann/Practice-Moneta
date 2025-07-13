@@ -1,0 +1,46 @@
+@prefix comcore: <http://www.semanticweb.org/comcore#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru ;
+  comcore:isPartOf :сайт_оператора ;
+  comcore:relation :кошелек .
+
+:кошелек rdf:type comcore:Resource ;
+  rdfs:label "Кошелек"@ru .
+
+:сайт_оператора rdf:type comcore:Resource ;
+  rdfs:label "Сайт Оператора"@ru ;
+  comcore:isResourceOf :доступ_в_личный_кабинет .
+
+:клиент rdf:type comcore:Agent ;
+  rdfs:label "Клиент"@ru ;
+  comcore:isActorOf :доступ_в_личный_кабинет .
+
+:лицевые_счета rdf:type comcore:Resource ;
+  rdfs:label "Лицевые счета"@ru ;
+  comcore:isPartOf :личный_кабинет .
+
+:информация rdf:type comcore:Resource ;
+  rdfs:label "информация"@ru ;
+  comcore:isPartOf :личный_кабинет .
+
+:доступ_в_личный_кабинет rdf:type comcore:Process ;
+  rdfs:label "Доступ в Личный кабинет"@ru .
+
+:настройка_двухфакторной_автен rdf:type comcore:Process ;
+  rdfs:label "настройка двухфакторной аутентификации"@ru ;
+  comcore:isPartOf :доступ_в_личный_кабинет .
+
+:протокол_https rdf:type comcore:Resource ;
+  rdfs:label "протокол HTTPS"@ru ;
+  comcore:isResourceOf :доступ_в_личный_кабинет .
+
+:протокол_totp rdf:type comcore:Resource ;
+  rdfs:label "протокол TOTP"@ru ;
+  comcore:isResourceOf :настройка_двухфакторной_автен .
+
+:оператор rdf:type comcore:Agent ;
+  rdfs:label "Оператор"@ru ;
+  comcore:isResponsibleFor :информация .

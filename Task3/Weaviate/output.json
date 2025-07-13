@@ -1,0 +1,137 @@
+[
+    {
+        "label": "Проверка сайта",
+        "abbreviation": "",
+        "hasStatement": [
+            "Проверка сайта hasActor ОБР",
+            "Проверка сайта hasActor Сотрудник отдела",
+            "Проверка сайта hasResource Сайт",
+            "ОБР isActorOf Проверка сайта",
+            "ОБР isResponsibleFor Проверка сайта",
+            "Сотрудник отдела isActorOf Проверка сайта",
+            "Присвоение статуса isResultOf Проверка сайта",
+            "Проверка сайта hasResult Присвоение статуса",
+            "Сайт isResourceFor Проверка сайта"
+        ],
+        "type": "Process"      
+    },
+    {
+        "label": "Отдел бизнес рисков",
+        "abbreviation": "ОБР",
+        "hasStatement": [
+            "Проверка сайта hasActor ОБР",
+            "ОБР isActorOf Проверка сайта",
+            "ОБР isResponsibleFor Проверка сайта"
+        ],
+        "type": "Agent"      
+    },
+    {
+        "label": "Сотрудник отдела сопровождения",
+        "abbreviation": "",
+        "hasStatement": [
+            "Проверка сайта hasActor Сотрудник отдела",
+            "Сотрудник отдела isActorOf Проверка сайта"
+        ],
+        "type": "Agent"      
+    },   
+    {
+        "label": "Присвоение статуса",
+        "abbreviation": "",
+        "hasStatement": [
+            "Присвоение статуса isResultOf Проверка сайта",
+            "Проверка сайта hasResult Присвоение статуса"
+        ],
+        "type": "Event"      
+    },
+    {
+        "label": "Сайт",
+        "abbreviation": "",
+        "hasStatement": [
+            "Сайт isResourceFor Проверка сайта",
+            "Проверка сайта hasResource Сайт"
+        ],
+        "type": "Resource"      
+    },
+    {
+        "label": "Авторизация клиента",
+        "abbreviation": "",
+        "hasStatement": [
+            "Авторизация клиента hasActor Система безопасности",
+            "Авторизация клиента hasResource Учетные данные",
+            "Авторизация клиента hasResult Выдача токена",
+            "Система безоспасности isActorFor Авторизация клиента",
+            "Учетные данные isResourceFor Авторизация клиента",
+            "Выдача токена isResultOf Авторизация клиента"
+        ],
+        "type": "Process"      
+    },
+    {
+        "label": "Система безопасности",
+        "abbreviation": "СБ",
+        "hasStatement": [
+            "Авторизация клиента hasActor СБ",
+            "СБ isActorOf Авторизация клиента",
+            "СБ isResponsibleFor Авторизация клиента"
+        ],
+        "type": "Agent"      
+    },
+    {
+        "label": "Выдача токена",
+        "abbreviation": "",
+        "hasStatement": [
+            "Выдача токена isResultOf Авторизация клиента",
+            "Авторизация клиента hasResult Выдача токена"
+        ],
+        "type": "Event"      
+    },
+    {
+        "label": "Учетные данные",
+        "abbreviation": "",
+        "hasStatement": [
+            "Учетные данные isResourceFor Авторизация клиента",
+            "Авторизация клиента hasResource Учетные данные"
+        ],
+        "type": "Resource"      
+    },
+    {
+        "label": "Оплата по счету",
+        "abbreviation": "",
+        "hasStatement": [
+            "Бухгалтерия isActorFor Оплата по счету",
+            "Оплата по счету hasActor Бухгалтерия",
+            "Оплата по счету hasResource Платежное поручение",
+            "Платежное поручение isResourceFor Оплата по счету",
+            "Подтверждение оплаты isResultOf Оплата по счету",
+            "Оплата по счету hasResult Подтверждение оплаты"
+        ],
+        "type": "Process"      
+    },
+    {
+        "label": "Бухгалтерия",
+        "abbreviation": "БУХ",
+        "hasStatement": [
+            "Оплата по счету hasActor БУХ",
+            "БУХ isActorOf Оплата по счету",
+            "БУХ isResponsibleFor Оплата по счету"
+        ],
+        "type": "Agent"      
+    },
+    {
+        "label": "Подтверждение оплаты",
+        "abbreviation": "",
+        "hasStatement": [
+            "Подтверждение оплаты isresultOf Оплата по счету",
+            "Оплата по счету hasResult Подтверждение оплаты"
+        ],
+        "type": "Event"      
+    },
+    {
+        "label": "Платежное поручение",
+        "abbreviation": "",
+        "hasStatement": [
+            "Платежное поручение isResourceFor Оплата по счету",
+            "Оплата по счету hasResource Платежное поручение"
+        ],
+        "type": "Resource"      
+    }
+]
