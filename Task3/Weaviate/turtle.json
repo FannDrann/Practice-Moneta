@@ -1,0 +1,72 @@
+[
+    {
+        "label": "Личный кабинет",
+        "abbreviation": "",
+        "type": "Resource",
+        "hasStatement": [
+            "личный кабинет hasPart информация"
+        ]
+    },
+    {
+        "label": "Кошелек",
+        "abbreviation": "",
+        "type": "Resource",
+        "hasStatement": []
+    },
+    {
+        "label": "Сайт Оператора",
+        "abbreviation": "",
+        "type": "Resource",
+        "hasStatement": []
+    },
+    {
+        "label": "Клиент",
+        "abbreviation": "",
+        "type": "Agent",
+        "hasStatement": []
+    },
+    {
+        "label": "Лицевые счета",
+        "abbreviation": "",
+        "type": "Resource",
+        "hasStatement": []
+    },
+    {
+        "label": "информация",
+        "abbreviation": "",
+        "type": "Resource",
+        "hasStatement": []
+    },
+    {
+        "label": "Доступ в Личный кабинет",
+        "abbreviation": "",
+        "type": "Process",
+        "hasStatement": [
+            "доступ в личный кабинет hasActor клиент"
+        ]
+    },
+    {
+        "label": "настройка двухфакторной аутентификации",
+        "abbreviation": "",
+        "type": "Process",
+        "hasStatement": []
+    },
+    {
+        "label": "протокол HTTPS",
+        "abbreviation": "",
+        "type": "Resource",
+        "hasStatement": []
+    },
+    {
+        "label": "протокол TOTP",
+        "abbreviation": "",
+        "type": "Resource",
+        "hasStatement": []
+    },
+    {
+        "label": "Оператор",
+        "abbreviation": "",
+        "type": "Agent",
+        "hasStatement": []
+    }
+]

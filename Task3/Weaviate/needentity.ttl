@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix comcore: <http://example.org/comcore#> .
+
+:Личный_кабинет_ЛК_Клиента rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет ЛК Клиента"@ru .
+
+:клиент rdf:type comcore:Resource ;
+  rdfs:label "клиент"@ru .
+
+:информатион rdf:type comcore:Resource ;
+  rdfs:label "Информатион"@ru .
+

@@ -1,0 +1,16 @@
+[
+  {
+    "properties": {
+      "label": "Личный кабинет",
+      "hasStatement": [
+        "личный кабинет hasPart информация"
+      ],
+      "abbreviation": "",
+      "type": "Resource"
+    },
+    "metadata": {
+      "score": 1.0,
+      "explain_score": "\nHybrid (Result Set keyword,bm25) Document 20ee4a65-c3e7-48d1-8085-043b790d7a41: original score 0.98478127, normalized score: 0.6 - \nHybrid (Result Set vector,hybridVector) Document 20ee4a65-c3e7-48d1-8085-043b790d7a41: original score 0.5854778, normalized score: 0.4"
+    }
+  }
+]

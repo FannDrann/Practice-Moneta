@@ -9,7 +9,7 @@ client = weaviate.connect_to_local(
 )
 
 # Чтение данных из JSON-файла
-with open('output.json', 'r', encoding='utf-8') as f:
+with open('Task3/Weaviate/turtle.json', 'r', encoding='utf-8') as f:
     entities = json.load(f)
 
 collection = client.collections.get("Test1")

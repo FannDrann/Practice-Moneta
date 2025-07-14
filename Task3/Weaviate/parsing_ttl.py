@@ -121,5 +121,7 @@ def parse_ttl_file_to_json(input_file, output_file=None):
     return json_data
 
 
-json_data = parse_ttl_file_to_json('test.ttl', 'output.json')
+json_data = parse_ttl_file_to_json('Task3/Weaviate/test.ttl', 'Task3/Weaviate/turtle.json')
+print(json.dumps(json_data, ensure_ascii=False, indent=2))
+json_data = parse_ttl_file_to_json('Task3/Weaviate/needentity.ttl', 'Task3/Weaviate/NeedEntity.json')
 print(json.dumps(json_data, ensure_ascii=False, indent=2))
